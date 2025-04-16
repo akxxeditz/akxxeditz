@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AKXX Tech - IPL News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AKXX Tech</h1>
+    <p>Your Source for IPL Updates</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('news')">IPL News</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="news" class="section active">
+    <h2>Latest IPL News</h2>
+    <ul id="news-list">
+      <li>
+        <strong>Abhishek Sharma's Record-Breaking Innings:</strong>
+        <p>Abhishek Sharma scored a sensational 141 runs off 55 balls, leading Sunrisers Hyderabad to an eight-wicket victory over Punjab Kings.</p>
+      </li>
+      <li>
+        <strong>Sunrisers Hyderabad's Historic Chase:</strong>
+        <p>Chased down a daunting 246 runs set by Punjab Kings, completing the IPL’s second-highest successful run chase.</p>
+      </li>
+      <li>
+        <strong>Chennai Super Kings' Continued Struggles:</strong>
+        <p>Despite reinstating MS Dhoni as captain, CSK posted their lowest home total of 103-9 in a loss to KKR.</p>
+      </li>
+      <li>
+        <strong>Upcoming Match – Rajasthan Royals vs. Royal Challengers Bengaluru:</strong>
+        <p>Today at the Sawai Mansingh Stadium, Jaipur — 3:00 PM IST.</p>
+      </li>
+      <li>
+        <strong>Upcoming Match – Delhi Capitals vs. Mumbai Indians:</strong>
+        <p>Tonight at the Arun Jaitley Stadium, Delhi — 7:00 PM IST.</p>
+      </li>
+    </ul>
+    <p style="margin-top: 30px; text-align: center; font-weight: bold;">News will be updated daily.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>For <strong style="color: black;">new updates</strong> and <strong style="color: black;">information</strong>, contact <strong style="color: #00bfff;">'AKXX Tech'</strong>.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 AKXX Tech. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
